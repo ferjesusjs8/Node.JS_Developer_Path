@@ -1,0 +1,44 @@
+body {
+    font-family: "Open Sans Condensed", serif;
+    background-color: #F2FFFC;
+}
+
+h1, h2 {
+    font-family: "Crimson Text", sans-serif;
+}
+
+main h1 {
+    text-align: center;
+    background-color: #851944;
+    color: #FFF;
+}
+
+p {
+    text-align: justify;
+}
+
+blockquote{
+    background: #D9E5E3;
+}
+
+aside{
+    background: #3C1D3D;
+}
+
+aside li a{
+    color: #F2FFFC;
+    text-decoration: none;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+aside li{
+    list-style: none;
+}
+
+footer{
+    background: #3C1D3D;
+}
+
+main a{
+    color: #851944;
+}
