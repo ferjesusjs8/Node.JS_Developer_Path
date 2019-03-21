@@ -16,6 +16,7 @@ main h1 {
 	padding: 25px;
 	border-bottom: 10px solid black;
 	font-size: 60px;
+	text-transform: uppercase;
 }
 
 p {
@@ -29,16 +30,30 @@ blockquote {
 	width: 250px;
 	box-sizing: border-box;
 	margin: 20px 40px;
+	font-style: italic; 
+}
+
+.fiat{
+	float: right;
+}
+
+.petrobras{
+	float: left;
 }
 
 aside {
 	background-color: #3C1D3D;
 	color: #F2FFFC;
+	float: right;
 }
 
 footer {
 	background-color: #000;
 	color: #F2FFFC;
+	clear: both;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
 }
 
 nav a {
@@ -57,6 +72,10 @@ aside a {
 aside ul li a {
 	text-decoration: none;
 }
+
+.linksAside li a:hover{
+	-webkit-filter: invert(100%) !important;
+}
 aside .iconesli li {
 	display: inline-block;
 	margin: 5px;
@@ -67,14 +86,47 @@ blockquote, aside, footer {
     padding: 20px;
 }
 
+aside .iconesli li a{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	color: transparent;
+}
+
+.twitter{
+	background-image: url(../images/twitter.png);
+	width: 40px;
+	height: 40px;
+}
+
+.linkedin{
+	background-image: url(../images/linkedin.png);
+	width: 40px;
+	height: 40px;
+}
+
+.github{
+	background-image: url(../images/github.png);
+	width: 40px;
+	height: 40px;
+}
+
+.twitter:hover, .linkedin:hover, .github:hover{
+	-webkit-filter: invert(100%) !important;
+}
+
 main div {
 	width: 720px;
 	margin: auto;
 	padding: 30px 0;
 }
 
-aside {
+aside{
 	text-align: center;
+	width: 16%;
+	box-sizing: border-box;
+	border: gray solid 6px;
+	padding: 320px 10px 20px 10px;
 }
 
 aside h1 {
@@ -94,4 +146,31 @@ em {
 
 h2 {
 	font-size: 30px;
+	clear: both;
+}
+
+main{
+	float: left;
+	width: 84%;
+}
+
+.fiat cite, .petrobras cite{
+	float: right;
+	padding: 10px;
+	text-align: center;
+}
+
+img{
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: gray solid 6px;
+}
+
+a:hover{
+	-webkit-filter: invert(100%) !important;
+}
+
+.conteudoPrincipal{
+	padding-bottom: 120px;
 }
