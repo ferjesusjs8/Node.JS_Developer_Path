@@ -36,8 +36,10 @@ for (var i = 0; i < pacientes.length; i++)
         msg += (peso.textContent / (altura.textContent * altura.textContent)).toFixed(2);
 
     imc.textContent = msg;
+};
 
-    console.log(peso);
-    console.log(altura);
-    console.log(msg);
-}
+var botao = document.querySelector('#adicionar_paciente');
+botao.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("clicou!");
+});
