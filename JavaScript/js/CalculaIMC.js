@@ -44,7 +44,3 @@ function CalculaIMC(peso, altura){
 
     return imc;
 }
-
-function VerificarPesoAltura(peso, altura){
-    return ( nome && peso && altura ) && ( peso > 0 && peso < 500 && altura > 0 && altura < 4 );
-}

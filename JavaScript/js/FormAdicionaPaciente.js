@@ -24,7 +24,7 @@ botao.addEventListener("click", function(event){
 
     
 
-    if ( VerificarPesoAltura(peso, altura) ) {
+    if ( VerificarPesoAltura(nome, peso, altura) ) {
         tdNome.textContent = nome;
         tdPeso.textContent = peso;
         tdAltura.textContent = altura;
@@ -38,9 +38,20 @@ botao.addEventListener("click", function(event){
         tablePacientes.appendChild(trNovoPaciente);
         erro.textContent = "";
 
+        formAdicionaPaciente.nome.value = "";
+        formAdicionaPaciente.peso.value = "";
+        formAdicionaPaciente.altura.value = "";
     }
 
     else {
-        erro.textContent = "Erro: Dados Inválidos!";
+        erro.textContent = "Erro: Dados Inválidos! Verifique os valores digitados!";
     }
 });
+
+function VerificarPesoAltura(nome, peso, altura){
+    return ( ( nome && peso && altura ) 
+        && ( peso > 0 && peso < 500 && altura > 0 && altura < 4 )
+        && ( !isNaN(peso) && !isNaN(altura) )
+        && ( isNaN(nome) ) 
+        );
+}
