@@ -33,7 +33,7 @@ header .container:before{
 }
 
 .container{
-	width: 60%;
+	width: 90%;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -44,11 +44,15 @@ section{
 }
 
 section h2{
-	font-size: 3em;
+	text-align: center;
+	color: coral;
+	font-size: 2em;
 	display: block;
 	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 10px solid lightpink;
 	margin-bottom: .5em;
+	padding-top: 1em;
+	font-weight: bolder;
 }
 
 table{
@@ -59,7 +63,8 @@ table{
 }
 
 td, th {
-	padding: .7em;
+	color: #555;
+	padding: .6em;
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
@@ -140,4 +145,41 @@ button[disabled=disabled], button:disabled {
 .atributoComErro {
 	color:red;
 	font-weight: bolder;
+}
+
+#formAdiciona .grupo {
+	padding-top: 1em;
+	margin: 0.5em;
+}
+
+.informacoes {
+	float: right;
+	width: 44%;
+}
+
+.addNovo {
+	float: left;
+	width: 55%;
+}
+
+.tabelaPacientes {
+	width: 75%;
+	margin: 0 auto;
+}
+
+footer p {
+	background-color: #333;
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 2em;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 600;
+}
+
+.messageError {
+	color: red;
+	font-weight: bolder;
+	font-size: 1em;
+	background-color: lightgoldenrodyellow;
 }

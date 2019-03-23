@@ -33,13 +33,18 @@ for (var i = 0; i < pacientes.length; i++)
     }
 
     if (pesoValido && alturaValida)
-        msg += (peso.textContent / (altura.textContent * altura.textContent)).toFixed(2);
+        msg += CalculaIMC(peso.textContent, altura.textContent);
 
     imc.textContent = msg;
 };
 
-var botao = document.querySelector('#adicionar_paciente');
-botao.addEventListener("click", function(event){
-    event.preventDefault();
-    console.log("clicou!");
-});
+function CalculaIMC(peso, altura){
+    var imc = 0;
+    imc = (peso / (altura * altura)).toFixed(2);
+
+    return imc;
+}
+
+function VerificarPesoAltura(peso, altura){
+    return ( nome && peso && altura ) && ( peso > 0 && peso < 500 && altura > 0 && altura < 4 );
+}
