@@ -4,17 +4,17 @@
 		<meta charset="UTF-8">
 		<title>Fernando JS Nutrição</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		
 	</head>
 	<body>
 
 		<header>
 			<div class="container">
 				<h1 class="titulo">Fernando JS Nutrição</h1>
-				
 			</div>
 		</header>
 
@@ -64,7 +64,12 @@
 			<section class="container">
 				<div class="tabelaPacientes">
 					<h2>Meus Pacientes</h2>
-					<table>
+
+					<div class="form-group">
+							<label for="nome">Filtrar Paciente:</label>
+							<input id="nome" class="form-control formMargin filtroPacientes" name="nome" type="text" placeholder="Digite o nome do seu paciente" class="campo">
+					</div>
+					<table class="tablePacientes">
 						<thead>
 							<tr>
 								<th>Nome</th>
@@ -96,6 +101,12 @@
 							</tr>
 						</tbody>
 					</table>
+
+					<div class="botoes">
+						<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
+						<button id="buscar-pacientes" class="btn btn-info">Buscar Pacientes</button>
+					</div>
+
 				</div>	
 				
 				<div class="addNovo">
@@ -132,10 +143,11 @@
 			</footer>
 
 		</main>
-
 		<script src="js/CalculaIMC.js"></script>
 		<script src="js/FormAdicionaPaciente.js"></script>
-
+		<script src="js/RemovePaciente.js"></script>
+		<script src="js/FiltrarPaciente.js"></script>
+		<script src="js/BuscarPacientes.js"></script>
 	</body>
 </html>
 

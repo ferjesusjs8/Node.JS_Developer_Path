@@ -6,15 +6,13 @@ botaoAdd.addEventListener( "click", function( event ){
 
     event.preventDefault( );
 
-    var tablePacientes = document.querySelector( "#tabela_pacientes" );
     var formAdicionaPaciente = document.querySelector( "#formAdiciona" );
     var erro = document.querySelector( ".messageError" );
     var paciente = ExtrairDadosFormulario( formAdicionaPaciente );
     RemoveMensagemErro(erro);
         
     if ( validaPessoa( paciente.nome, paciente.peso, paciente.altura ) ) {
-        var trNovoPaciente = montaTr( paciente );
-        tablePacientes.appendChild( trNovoPaciente );
+        AdicionaPacienteNaTabela(paciente);
     }
 
     else {
@@ -68,4 +66,21 @@ function RemoveMensagemErro( erro ) {
     erro.classList.remove("alert");
     erro.classList.remove("alert-danger");
     erro.innerHTML = "";
+}
+
+function AdicionaPacienteNaTabela( paciente ) {
+    var trNovoPaciente = montaTr( paciente );
+    var tablePacientes = document.querySelector( "#tabela_pacientes" );
+    trNovoPaciente.classList.add("invisivel");
+    tablePacientes.appendChild( trNovoPaciente );
+        
+    setTimeout(() => {
+        trNovoPaciente.classList.remove("invisivel");
+        trNovoPaciente.classList.add("fadeOut");
+    }, 100);
+
+    setTimeout(() => {
+        trNovoPaciente.classList.add("fadeIn");
+    }, 100);
+
 }

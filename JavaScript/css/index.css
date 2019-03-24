@@ -191,3 +191,17 @@ footer p {
 .formMargin {
 	margin-right: 10px;
 } 
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.fadeIn {
+	opacity: 1;
+	transition: 1s;
+}
+
+.invisivel {
+	display: none;
+}
