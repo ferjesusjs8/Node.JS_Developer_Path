@@ -59,7 +59,7 @@ table{
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
-
+	text-align: center;
 }
 
 td, th {
@@ -153,17 +153,17 @@ button[disabled=disabled], button:disabled {
 }
 
 .informacoes {
-	float: right;
-	width: 44%;
+	width: 90%;
 }
 
 .addNovo {
-	float: left;
-	width: 55%;
+	float: right;
+	width: 50%;
 }
 
 .tabelaPacientes {
-	width: 75%;
+	float: left;
+	width: 48%;
 	margin: 0 auto;
 }
 
@@ -183,3 +183,11 @@ footer p {
 	font-size: 1em;
 	background-color: lightgoldenrodyellow;
 }
+
+.messageError li{
+	padding: 0.5em;
+}
+
+.formMargin {
+	margin-right: 10px;
+} 

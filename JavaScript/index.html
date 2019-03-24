@@ -2,22 +2,65 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Aparecida Nutrição</title>
+		<title>Fernando JS Nutrição</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	</head>
 	<body>
 
 		<header>
 			<div class="container">
-				<h1 class="titulo">Aparecida Nutrição</h1>
+				<h1 class="titulo">Fernando JS Nutrição</h1>
 				
 			</div>
 		</header>
 
 		<main>
+
+			<section class="container">
+				
+				<aside class="informacoes">
+	
+					<h2 class="infoIMC">Tabela Informações IMC</h2>
+		
+					<table class="tabelaInfo">
+						<tr>
+							<th>IMC</th>
+							<th>Informações</th>
+						</tr>
+						<tr>
+							<td>Menos do que 18,5</td>
+							<td>Abaixo do peso</td>
+						</tr>
+						<tr>
+							<td>Entre 18,5 e 24,9</td>
+							<td>Peso normal</td>
+						</tr>
+						<tr>
+							<td>Entre 25 e 29,9</td>
+							<td>Sobrepeso</td>
+						</tr>
+						<tr>
+							<td>Entre 30 e 34,9</td>
+							<td>Obesidade grau 1</td>
+						</tr>
+						<tr>
+							<td>Entre 35 e 39,9</td>
+							<td>Obesidade grau 2</td>
+						</tr>
+						<tr>
+							<td>Mais do que 40</td>
+							<td>Obesidade grau 3</td>
+						</tr>
+					</table>
+		
+				</aside>
+		
+			</section>
+
 			<section class="container">
 				<div class="tabelaPacientes">
 					<h2>Meus Pacientes</h2>
@@ -53,77 +96,39 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>				
-
-			</section>
-
-			<section class="container">
-
+				</div>	
+				
 				<div class="addNovo">
 
 					<h2 id="titulo-form">Adicionar Novo Paciente</h2>
-					
-					<form id="formAdiciona">
-						<h3 class="messageError"></h3>
 						
-						<div class="grupo">
-							<label for="nome">Nome:</label>
-							<input id="nome" name="nome" type="text" placeholder="Digite o nome do seu paciente" class="campo">
+					<form id="formAdiciona">
+						<ul class="messageError" role="alert"></ul>
+							
+						<div class="form-group">
+							<label for="nome">Nome*: Ex. Fernando</label>
+							<input id="nome" class="form-control formMargin" name="nome" type="text" placeholder="Digite o nome do seu paciente" class="campo">
 						</div>
-						<div class="grupo">
-							<label for="peso">Peso:</label>
-							<input id="peso" name="peso" type="text" placeholder="Digite o peso do seu paciente" class="campo campo-medio">
+						<div class="form-group">
+							<label for="peso">Peso*: Ex. 80</label>
+							<input id="peso" class="form-control formMargin" name="peso" type="text" placeholder="Digite o peso do seu paciente" class="campo campo-medio">
 						</div>
-						<div class="grupo">
-							<label for="altura">Altura:</label>
-							<input id="altura" name="altura" type="text" placeholder="Digite a altura do seu paciente" class="campo campo-medio">
+						<div class="form-group">
+							<label for="altura">Altura*: Ex. 1.75</label>
+							<input id="altura" class="form-control formMargin" name="altura" type="text" placeholder="Digite a altura do seu paciente" class="campo campo-medio">
 						</div>
-			
-						<button id="adicionar_paciente" class="botao bto_principal">Adicionar</button>
+				
+						<div class="botoes">
+							<button id="adicionar_paciente" class="btn btn-info">Adicionar</button>
+							<button id="limpar_form" class="btn btn-info">Limpar</button>
+						</div>
 					</form>
 				</div>
-
-				<aside class="informacoes">
-
-					<h2 class="infoIMC">Tabela Informações IMC</h2>
-	
-					<table class="tabelaInfo">
-						<tr>
-								<th>IMC</th>
-								<th>Informações</th>
-						</tr>
-						<tr>
-							<td>Menos do que 18,5</td>
-							<td>Abaixo do peso</td>
-						</tr>
-						<tr>
-							<td>Entre 18,5 e 24,9</td>
-							<td>Peso normal</td>
-						</tr>
-						<tr>
-							<td>Entre 25 e 29,9</td>
-							<td>Sobrepeso</td>
-						</tr>
-						<tr>
-							<td>Entre 30 e 34,9</td>
-							<td>Obesidade grau 1</td>
-						</tr>
-						<tr>
-							<td>Entre 35 e 39,9</td>
-							<td>Obesidade grau 2</td>
-						</tr>
-						<tr>
-							<td>Mais do que 40</td>
-							<td>Obesidade grau 3</td>
-						</tr>
-					</table>
-
-				</aside>
 
 			</section>
 
 			<footer>
-					<p>Site Teste Aparecida Nutricionista &copy; 2019</p>
+				<p>Site Teste Fernando JS Nutricionista &copy; 2019</p>
 			</footer>
 
 		</main>

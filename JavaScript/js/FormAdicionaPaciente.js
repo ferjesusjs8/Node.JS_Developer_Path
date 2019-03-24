@@ -1,7 +1,8 @@
 
-var botao = document.querySelector( '#adicionar_paciente' );
+var botaoAdd = document.querySelector( '#adicionar_paciente' );
+var botaoLimpar = document.querySelector( '#limpar_form' );
 
-botao.addEventListener( "click", function( event ){
+botaoAdd.addEventListener( "click", function( event ){
 
     event.preventDefault( );
 
@@ -9,27 +10,27 @@ botao.addEventListener( "click", function( event ){
     var formAdicionaPaciente = document.querySelector( "#formAdiciona" );
     var erro = document.querySelector( ".messageError" );
     var paciente = ExtrairDadosFormulario( formAdicionaPaciente );
-
-    if ( VerificarPesoAltura( paciente.nome, paciente.peso, paciente.altura ) ) {
+    RemoveMensagemErro(erro);
+        
+    if ( validaPessoa( paciente.nome, paciente.peso, paciente.altura ) ) {
         var trNovoPaciente = montaTr( paciente );
         tablePacientes.appendChild( trNovoPaciente );
-        erro.textContent = "";
     }
 
     else {
-        erro.textContent = "Erro: Dados Inválidos! Verifique os valores digitados!";
+        mensagemErro ( paciente.nome, paciente.peso, paciente.altura )
     }
 
     formAdicionaPaciente.reset( );
 });
 
-function VerificarPesoAltura( nome, peso, altura ){
-    return ( ( nome && peso && altura ) 
-        && ( peso > 0 && peso < 500 && altura > 0 && altura < 4 )
-        && ( !isNaN( peso ) && !isNaN( altura ) )
-        && ( isNaN( nome ) ) 
-        );
-}
+botaoLimpar.addEventListener( "click", function( event ){
+    event.preventDefault( );
+    var formAdicionaPaciente = document.querySelector( "#formAdiciona" );
+    var erro = document.querySelector( ".messageError" );
+    RemoveMensagemErro(erro);
+    formAdicionaPaciente.reset( );
+});
 
 function ExtrairDadosFormulario( form ){
 
@@ -61,4 +62,10 @@ function montaTd( dado, classe ){
     td.textContent = dado;
     
     return td;
+}
+
+function RemoveMensagemErro( erro ) {
+    erro.classList.remove("alert");
+    erro.classList.remove("alert-danger");
+    erro.innerHTML = "";
 }
